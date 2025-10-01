@@ -67,12 +67,28 @@ class TodoHandler(BaseHTTPRequestHandler):
         .delete-btn:hover { background: #dc2626; }
         .add-form { 
             display: flex; 
-            gap: 0.5rem;
+            flex-direction: column;
+            gap: 0.75rem;
             margin-bottom: 2rem;
         }
         .add-form input { 
-            flex: 1;
+            width: 100%;
             margin: 0;
+            padding: 1rem;
+            font-size: 1.1rem;
+            border-radius: 0.5rem;
+        }
+        .add-form button {
+            width: 100%;
+            margin: 0;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: #4f46e5;
+            border-radius: 0.5rem;
+        }
+        .add-form button:hover {
+            background: #4338ca;
         }
         .stats {
             display: flex;
@@ -267,3 +283,4 @@ def run_server(port=5001):
 
 if __name__ == '__main__':
     run_server()
+
